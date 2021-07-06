@@ -15,7 +15,7 @@ public class GameClassMain {
         if (args.length == 1) {
             String language = args[0].toLowerCase();
             setLocale(language);
-        } else {
+        } else if (args.length > 1) {
             System.out.println("Allowed to enter only ONE argument (ru/uk/en)");
             System.exit(1);
         }
