@@ -17,3 +17,11 @@ out/
 *.iml
 *.ipr
 *.iws
+
+##############################
+## Maven
+##############################
+classes/
+generated-sources/
+maven-archiver/
+maven-status/
