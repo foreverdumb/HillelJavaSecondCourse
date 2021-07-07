@@ -33,7 +33,7 @@ public class MainClass {
                 option.next();
             }
             option_number = option.nextInt();
-        } while (option_number != 1 && option_number != 2 && option_number != 3 && option_number != 4);
+        } while (option_number != 1 && option_number != 2 && option_number != 3);
 
         return option_number;
     }
