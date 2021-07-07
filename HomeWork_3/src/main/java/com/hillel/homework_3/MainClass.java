@@ -2,7 +2,7 @@ package com.hillel.homework_3;
 
 import java.util.Scanner;
 
-public class MainClass extends CarClass {
+public class MainClass {
     public static void main(String[] args) {
 
         int option;
