@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="warn" packages="">
+    <Properties>
+        <Property name="basePath">./FileDirCreationLog</Property>
+    </Properties>
+
+    <Appenders>
+
+        <RollingFile name="fileInfoLogger" fileName="${basePath}/INFO/app-info.log"
+                     filePattern="${basePath}/app-info-%d{yyyy-MM-dd}.log">
+            <LevelRangeFilter minLevel="INFO" maxLevel="INFO" onMatch="ACCEPT" onMismatch="DENY"/>
+            <PatternLayout>
+                <pattern>[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n</pattern>
+            </PatternLayout>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+                <SizeBasedTriggeringPolicy size="250 MB"/>
+            </Policies>
+        </RollingFile>
+
+        <RollingFile name="errorLogger" fileName="${basePath}/ERRORS/app-error.log"
+                     filePattern="${basePath}/app-info-%d{yyyy-MM-dd}.log">
+            <LevelRangeFilter minLevel="ERROR" maxLevel="ERROR" onMatch="ACCEPT" onMismatch="DENY"/>
+            <PatternLayout>
+                <pattern>[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n</pattern>
+            </PatternLayout>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+                <SizeBasedTriggeringPolicy size="250 MB"/>
+            </Policies>
+        </RollingFile>
+
+        <Console name="console" target="SYSTEM_OUT">
+            <PatternLayout pattern="[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n"/>
+        </Console>
+
+    </Appenders>
+
+    <Loggers>
+
+        <Logger name="appLogger" level="all" additivity="true">
+            <appender-ref ref="fileInfoLogger" level="info"/>
+            <appender-ref ref="errorLogger" level="error" />
+        </Logger>
+
+        <Root level="all" additivity="false">
+            <appender-ref ref="console"/>
+        </Root>
+
+    </Loggers>
+
+</Configuration>
