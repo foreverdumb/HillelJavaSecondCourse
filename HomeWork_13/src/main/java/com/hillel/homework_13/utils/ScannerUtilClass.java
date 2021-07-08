@@ -2,7 +2,7 @@ package com.hillel.homework_13.utils;
 
 import java.util.Scanner;
 
-public class ScannerUtils {
+public class ScannerUtilClass {
     public static String setNumber() {
         String number;
         Scanner sc = new Scanner(System.in);
