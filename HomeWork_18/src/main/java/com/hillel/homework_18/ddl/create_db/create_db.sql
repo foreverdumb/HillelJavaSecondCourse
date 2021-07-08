@@ -1,52 +1,52 @@
-CREATE DATABASE if not exists Student;
-USE Student;
+CREATE SCHEMA if not exists Student;
 
-CREATE TABLE Cathedra
+CREATE TABLE IF NOT EXISTS Cathedra
 (
-    ID_CA                  BIGINT UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    cathedraName           TINYTEXT        NOT NULL,
-    headOfCathedraFullName VARCHAR(150)    NOT NULL
+    ID_CA                  BIGINT       NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    cathedraName           TINYTEXT     NOT NULL,
+    headOfCathedraFullName VARCHAR(150) NOT NULL
 );
 
-CREATE TABLE Teachers
+CREATE TABLE IF NOT EXISTS Teachers
 (
-    ID_TE           BIGINT UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    fullTeacherName VARCHAR(150)    NOT NULL,
-    cathedraID      BIGINT UNSIGNED NOT NULL
+    ID_TE           BIGINT       NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    fullTeacherName VARCHAR(150) NOT NULL,
+    cathedraID      BIGINT       NOT NULL
 );
 
-CREATE TABLE Subjects
+CREATE TABLE IF NOT EXISTS Subjects
 (
-    ID_SU       BIGINT UNSIGNED   NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    subjectName VARCHAR(50)       NOT NULL,
-    teacherID   BIGINT UNSIGNED   NOT NULL,
-    term        TINYINT UNSIGNED  NOT NULL,
-    year        SMALLINT UNSIGNED NOT NULL
+    ID_SU       BIGINT      NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    subjectName VARCHAR(50) NOT NULL,
+    teacherID   BIGINT      NOT NULL,
+    term        TINYINT     NOT NULL,
+    year        SMALLINT    NOT NULL
 );
 
-CREATE TABLE Marks
+CREATE TABLE IF NOT EXISTS Marks
 (
-    ID_M      BIGINT UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    subjectID BIGINT UNSIGNED NOT NULL,
-    studentID BIGINT UNSIGNED NOT NULL,
-    mark      VARCHAR(1)      NOT NULL
+    ID_M      BIGINT     NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    subjectID BIGINT     NOT NULL,
+    studentID BIGINT     NOT NULL,
+    mark      VARCHAR(3) NOT NULL
 );
 
-CREATE TABLE StudyGroup
+CREATE TABLE IF NOT EXISTS StudyGroup
 (
-    ID_SG     BIGINT UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    groupName VARCHAR(50)     NOT NULL
+    ID_SG     BIGINT      NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    groupName VARCHAR(50) NOT NULL
 );
 
-CREATE TABLE Students
+CREATE TABLE IF NOT EXISTS Students
 (
-    ID_ST                  BIGINT UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    studentFullName        VARCHAR(150)    NOT NULL,
-    groupID                BIGINT UNSIGNED NOT NULL,
-    studentYearOfAdmission SMALLINT UNSIGNED
+    ID_ST                  BIGINT                NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    studentFullName        VARCHAR(150)          NOT NULL,
+    groupID                BIGINT                NOT NULL,
+    studentYearOfAdmission SMALLINT,
+    isDeleted              BOOLEAN DEFAULT FALSE NOT NULL
 );
 
-ALTER TABLE Teachers
+ALTER TABLE IF EXISTS Teachers
     ADD
         CONSTRAINT FK_Teachers_Cathedra
             FOREIGN KEY (cathedraID)
@@ -54,7 +54,7 @@ ALTER TABLE Teachers
                 ON DELETE CASCADE
                 ON UPDATE CASCADE;
 
-ALTER TABLE Subjects
+ALTER TABLE IF EXISTS Subjects
     ADD
         CONSTRAINT FK_Subjects_Teachers
             FOREIGN KEY (teacherID)
@@ -62,7 +62,7 @@ ALTER TABLE Subjects
                 ON DELETE CASCADE
                 ON UPDATE CASCADE;
 
-ALTER TABLE Marks
+ALTER TABLE IF EXISTS Marks
     ADD
         CONSTRAINT FK_Marks_Subject
             FOREIGN KEY (subjectID)
@@ -70,7 +70,7 @@ ALTER TABLE Marks
                 ON DELETE CASCADE
                 ON UPDATE CASCADE;
 
-ALTER TABLE Students
+ALTER TABLE IF EXISTS Students
     ADD
         CONSTRAINT FK_Students_StudyGroup
             FOREIGN KEY (groupID)
@@ -78,7 +78,7 @@ ALTER TABLE Students
                 ON DELETE CASCADE
                 ON UPDATE CASCADE;
 
-ALTER TABLE Marks
+ALTER TABLE IF EXISTS Marks
     ADD
         CONSTRAINT FK_Marks_Students
             FOREIGN KEY (studentID)

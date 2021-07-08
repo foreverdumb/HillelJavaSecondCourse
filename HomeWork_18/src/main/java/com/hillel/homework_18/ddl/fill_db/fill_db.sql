@@ -1,27 +1,27 @@
-insert into Cathedra (cathedraName, headOfCathedraName)
+insert into Cathedra (cathedraname, headofcathedrafullname)
 values ('Product Management', 'Olivier Pedrocco');
-insert into Cathedra (cathedraName, headOfCathedraName)
+insert into Cathedra (cathedraname, headofcathedrafullname)
 values ('Services', 'Elyse Riepl');
-insert into Cathedra (cathedraName, headOfCathedraName)
+insert into Cathedra (cathedraname, headofcathedrafullname)
 values ('Sales', 'Elfrieda Gettings');
-insert into Cathedra (cathedraName, headOfCathedraName)
+insert into Cathedra (cathedraname, headofcathedrafullname)
 values ('Marketing', 'Clare Baldi');
 
-insert into Teachers (teacherName, cathedraID)
+insert into Teachers (fullteachername, cathedraid)
 values ('Simone Bucham', 1);
-insert into Teachers (teacherName, cathedraID)
+insert into Teachers (fullteachername, cathedraid)
 values ('Mohandis Billiard', 2);
-insert into Teachers (teacherName, cathedraID)
+insert into Teachers (fullteachername, cathedraid)
 values ('Danny Antowski', 1);
-insert into Teachers (teacherName, cathedraID)
+insert into Teachers (fullteachername, cathedraid)
 values ('Denna Brassill', 4);
-insert into Teachers (teacherName, cathedraID)
+insert into Teachers (fullteachername, cathedraid)
 values ('Brendan Petrolli', 4);
-insert into Teachers (teacherName, cathedraID)
+insert into Teachers (fullteachername, cathedraid)
 values ('Hephzibah Adamolli', 2);
-insert into Teachers (teacherName, cathedraID)
+insert into Teachers (fullteachername, cathedraid)
 values ('Philipa Standish', 3);
-insert into Teachers (teacherName, cathedraID)
+insert into Teachers (fullteachername, cathedraid)
 values ('Elfie Keston', 4);
 
 insert into Subjects (subjectName, teacherID, term, year)
@@ -55,55 +55,55 @@ values ('Energy', 2, 2, 2020);
 insert into Subjects (subjectName, teacherID, term, year)
 values ('Finance', 8, 1, 2020);
 
-insert into STUDY_GROUP (groupName)
+insert into StudyGroup (groupName)
 values ('GRP-101');
-insert into STUDY_GROUP (groupName)
+insert into StudyGroup (groupName)
 values ('GRP-201');
-insert into STUDY_GROUP (groupName)
+insert into StudyGroup (groupName)
 values ('GRP-301');
 
-insert into Students (studentFullName, groupID, studentYearOfAdmission)
+insert into Students (studentfullname, groupid, studentyearofadmission)
 values ('Thomas Shingles', 1, 2016);
-insert into Students (studentFullName, groupID, studentYearOfAdmission)
+insert into Students (studentfullname, groupid, studentyearofadmission)
 values ('Veronika Marguerite', 3, 2018);
-insert into Students (studentFullName, groupID, studentYearOfAdmission)
+insert into Students (studentfullname, groupid, studentyearofadmission)
 values ('Lela Danett', 2, 2017);
-insert into Students (studentFullName, groupID, studentYearOfAdmission)
+insert into Students (studentfullname, groupid, studentyearofadmission)
 values ('Shaylah Brideoke', 3, 2018);
-insert into Students (studentFullName, groupID, studentYearOfAdmission)
+insert into Students (studentfullname, groupid, studentyearofadmission)
 values ('Thelma Shovelin', 2, 2017);
-insert into Students (studentFullName, groupID, studentYearOfAdmission)
+insert into Students (studentfullname, groupid, studentyearofadmission)
 values ('Juliet Pengelly', 1, 2016);
-insert into Students (studentFullName, groupID, studentYearOfAdmission)
+insert into Students (studentfullname, groupid, studentyearofadmission)
 values ('Joli Royds', 3, 2018);
-insert into Students (studentFullName, groupID, studentYearOfAdmission)
+insert into Students (studentfullname, groupid, studentyearofadmission)
 values ('Rinaldo Gillbard', 2, 2017);
-insert into Students (studentFullName, groupID, studentYearOfAdmission)
+insert into Students (studentfullname, groupid, studentyearofadmission)
 values ('Chantalle Milward', 2, 2017);
-insert into Students (studentFullName, groupID, studentYearOfAdmission)
+insert into Students (studentfullname, groupid, studentyearofadmission)
 values ('Isidro Mouatt', 2, 2017);
-insert into Students (studentFullName, groupID, studentYearOfAdmission)
+insert into Students (studentfullname, groupid, studentyearofadmission)
 values ('Anselma Asipenko', 1, 2016);
-insert into Students (studentFullName, groupID, studentYearOfAdmission)
+insert into Students (studentfullname, groupid, studentyearofadmission)
 values ('Lynda Gammon', 3, 2018);
-insert into Students (studentFullName, groupID, studentYearOfAdmission)
+insert into Students (studentfullname, groupid, studentyearofadmission)
 values ('Mill Laverty', 1, 2016);
-insert into Students (studentFullName, groupID, studentYearOfAdmission)
+insert into Students (studentfullname, groupid, studentyearofadmission)
 values ('Perri Taillard', 2, 2017);
-insert into Students (studentFullName, groupID, studentYearOfAdmission)
+insert into Students (studentfullname, groupid, studentyearofadmission)
 values ('Ania Langmuir', 3, 2018);
-insert into Students (studentFullName, groupID, studentYearOfAdmission)
+insert into Students (studentfullname, groupid, studentyearofadmission)
 values ('Averil Broadfield', 1, 2016);
-insert into Students (studentFullName, groupID, studentYearOfAdmission)
+insert into Students (studentfullname, groupid, studentyearofadmission)
 values ('Correna Yurinov', 2, 2017);
-insert into Students (studentFullName, groupID, studentYearOfAdmission)
+insert into Students (studentfullname, groupid, studentyearofadmission)
 values ('Sadie Easbie', 3, 2018);
-insert into Students (studentFullName, groupID, studentYearOfAdmission)
+insert into Students (studentfullname, groupid, studentyearofadmission)
 values ('Tracee Volonte', 3, 2018);
-insert into Students (studentFullName, groupID, studentYearOfAdmission)
+insert into Students (studentfullname, groupid, studentyearofadmission)
 values ('Bari Swyre', 2, 2017);
 
-insert into Marks (subjectID, studentID, mark)
+insert into Marks (subjectid, studentid, mark)
 values (9, 12, 64);
 insert into Marks (subjectID, studentID, mark)
 values (8, 16, 77);
