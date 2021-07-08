@@ -163,4 +163,3 @@ insert into Marks (subjectID, studentID, mark)
 values (11, 9, 66);
 insert into Marks (subjectID, studentID, mark)
 values (13, 4, 61);
-
