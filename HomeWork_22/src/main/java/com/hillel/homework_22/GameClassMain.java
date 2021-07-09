@@ -1,6 +1,6 @@
-package com.hillel.homework_26;
+package com.hillel.homework_22;
 
-import com.hillel.homework_26.utils.GameUtilClass;
+import com.hillel.homework_22.utils.GameUtilClass;
 
 public class GameClassMain {
     public static void main(String[] args) {

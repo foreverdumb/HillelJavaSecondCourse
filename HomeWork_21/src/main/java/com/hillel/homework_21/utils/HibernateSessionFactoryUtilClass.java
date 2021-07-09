@@ -1,7 +1,7 @@
-package com.hillel.homework_25.utils;
+package com.hillel.homework_21.utils;
 
-import com.hillel.homework_25.models.StudentsClass;
-import com.hillel.homework_25.models.StudyGroupClass;
+import com.hillel.homework_21.models.StudentsClass;
+import com.hillel.homework_21.models.StudyGroupClass;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;

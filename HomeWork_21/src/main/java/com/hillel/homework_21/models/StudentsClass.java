@@ -1,4 +1,4 @@
-package com.hillel.homework_25.models;
+package com.hillel.homework_21.models;
 
 import lombok.Getter;
 import lombok.Setter;

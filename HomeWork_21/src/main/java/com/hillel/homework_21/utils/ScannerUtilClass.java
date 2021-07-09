@@ -1,4 +1,4 @@
-package com.hillel.homework_25.utils;
+package com.hillel.homework_21.utils;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

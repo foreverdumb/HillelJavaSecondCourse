@@ -1,7 +1,7 @@
-package com.hillel.homework_25.dao;
+package com.hillel.homework_21.dao;
 
-import com.hillel.homework_25.models.StudentsClass;
-import com.hillel.homework_25.utils.HibernateSessionFactoryUtilClass;
+import com.hillel.homework_21.models.StudentsClass;
+import com.hillel.homework_21.utils.HibernateSessionFactoryUtilClass;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.Transaction;

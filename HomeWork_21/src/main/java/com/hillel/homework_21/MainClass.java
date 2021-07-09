@@ -1,10 +1,10 @@
-package com.hillel.homework_25;
+package com.hillel.homework_21;
 
-import com.hillel.homework_25.models.StudentsClass;
-import com.hillel.homework_25.models.StudyGroupClass;
-import com.hillel.homework_25.services.StudentServiceClass;
-import com.hillel.homework_25.utils.HibernateSessionFactoryUtilClass;
-import com.hillel.homework_25.utils.ScannerUtilClass;
+import com.hillel.homework_21.models.StudentsClass;
+import com.hillel.homework_21.models.StudyGroupClass;
+import com.hillel.homework_21.services.StudentServiceClass;
+import com.hillel.homework_21.utils.HibernateSessionFactoryUtilClass;
+import com.hillel.homework_21.utils.ScannerUtilClass;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

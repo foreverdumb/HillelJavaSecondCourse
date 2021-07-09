@@ -35,8 +35,8 @@
             1
         </property>
 
-        <mapping class="com.hillel.homework_25.models.StudentsClass"/>
-        <mapping class="com.hillel.homework_25.models.StudyGroupClass"/>
+        <mapping class="com.hillel.homework_21.models.StudentsClass"/>
+        <mapping class="com.hillel.homework_21.models.StudyGroupClass"/>
 
     </session-factory>
 

@@ -1,7 +1,7 @@
-package com.hillel.homework_25.services;
+package com.hillel.homework_21.services;
 
-import com.hillel.homework_25.dao.StudentDaoClass;
-import com.hillel.homework_25.models.StudentsClass;
+import com.hillel.homework_21.dao.StudentDaoClass;
+import com.hillel.homework_21.models.StudentsClass;
 
 import java.sql.SQLException;
 import java.util.List;
