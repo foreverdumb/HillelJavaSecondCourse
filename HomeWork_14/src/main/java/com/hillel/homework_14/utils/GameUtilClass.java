@@ -21,7 +21,7 @@ public class GameUtilClass {
                 sc.next();
             }
             option = sc.nextInt();
-        } while (option < 0);
+        } while (option != 1 && option != 2 && option != 0);
         return option;
     }
 
@@ -56,14 +56,16 @@ public class GameUtilClass {
     private static String goOrStop() {
         Scanner sc = new Scanner(System.in);
         String option;
-        System.out.println("""
+        do {
+            System.out.println("""
                 Enter 'Yes' to continue the game
                 Enter 'No' to stop the game
                 """);
-        option = sc.nextLine();
-        if (!option.equals("Yes"))
-            if (!option.equals("No"))
-                System.out.println("Wrong input!");
+            option = sc.nextLine();
+            if (!option.equals("Yes") && !option.equals("No")) {
+                System.out.println("Wrong option");;
+            }
+        } while (!option.equals("Yes") && !option.equals("No"));
         return option;
     }
 
