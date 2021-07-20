@@ -52,6 +52,15 @@ public class CacheImplClass<K, V> implements CacheInterface<K, V> {
         }
     }
 
+    /**
+     * <p>
+     * Description of containsKey(K key) method...
+     * Finds key in the map
+     * </p>
+     *
+     * @param key is the elements' key in the map
+     * @return true if found false if not
+     */
     @Override
     public boolean containsKey(K key) {
         return this.cacheMap.containsKey(key);
