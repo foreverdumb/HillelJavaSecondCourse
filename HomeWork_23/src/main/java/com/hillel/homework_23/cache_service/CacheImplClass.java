@@ -38,7 +38,6 @@ public class CacheImplClass<K, V> implements CacheInterface<K, V> {
      * Description of clean() method...
      * Cleans cache by searching expired keys
      * </p>
-     * Cleans cache
      *
      * @since 1.0
      */
