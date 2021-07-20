@@ -52,6 +52,11 @@ public class CacheImplClass<K, V> implements CacheInterface<K, V> {
         }
     }
 
+    @Override
+    public boolean containsKey(K key) {
+        return this.cacheMap.containsKey(key);
+    }
+
 
     /**
      * <p>
@@ -66,11 +71,18 @@ public class CacheImplClass<K, V> implements CacheInterface<K, V> {
      */
     @Override
     public boolean put(K key, V value) {
-        int size_before = this.cacheMap.size();
-        this.cacheMap.put(key, this.createCacheValue(value));
-        int size_after = this.cacheMap.size();
-        info_logger.log(Level.INFO, "Key [" + key + "] with value [" + value + "] is added...");
-        return size_before < size_after;
+        if (key != null && value != null) {
+            if (containsKey(key)) {
+                this.cacheMap.put(key, this.createCacheValue(value));
+                warn_logger.log(Level.WARN, "Found key duplicate, new value was wrote");
+            }
+            int size_before = this.cacheMap.size();
+            this.cacheMap.put(key, this.createCacheValue(value));
+            int size_after = this.cacheMap.size();
+            info_logger.log(Level.INFO, "Key [" + key + "] with value [" + value + "] is added...");
+            return size_before < size_after;
+        }
+        return false;
     }
 
     /**
@@ -80,7 +92,7 @@ public class CacheImplClass<K, V> implements CacheInterface<K, V> {
      * </p>
      *
      * @param value is the elements' value in the map
-     * @return CacheValueInterface<> which returns cache value and current date & time
+     * @return CacheValueInterface which returns cache value and current date and time
      * @since 1.0
      */
     protected CacheValueInterface<V> createCacheValue(V value) {
