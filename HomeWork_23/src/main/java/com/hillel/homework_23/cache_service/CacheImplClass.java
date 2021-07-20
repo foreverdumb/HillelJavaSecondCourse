@@ -165,8 +165,12 @@ public class CacheImplClass<K, V> implements CacheInterface<K, V> {
      */
     @Override
     public void clear(K key) {
-        this.cacheMap.remove(key);
-        info_logger.log(Level.INFO, "Key [" + key + "] is removed...");
+        if (!this.cacheMap.isEmpty()) {
+            this.cacheMap.remove(key);
+            info_logger.log(Level.INFO, "Key [" + key + "] is removed...");
+        } else {
+            warn_logger.log(Level.WARN, "Nothing to clear cache is empty");
+        }
     }
 
     /**
@@ -210,6 +214,7 @@ public class CacheImplClass<K, V> implements CacheInterface<K, V> {
      * @since 1.0
      */
     public int mapSize() {
+        if (this.cacheMap.size() == 0) warn_logger.log(Level.WARN, "Cache size is 0");
         info_logger.log(Level.INFO, "Printed map size");
         return this.cacheMap.size();
     }
