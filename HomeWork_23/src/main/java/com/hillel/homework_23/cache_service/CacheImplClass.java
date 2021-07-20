@@ -80,7 +80,7 @@ public class CacheImplClass<K, V> implements CacheInterface<K, V> {
      * </p>
      *
      * @param value is the elements' value in the map
-     * @return CacheValueInterface<V> which returns cache value and current date & time
+     * @return CacheValueInterface<> which returns cache value and current date & time
      * @since 1.0
      */
     protected CacheValueInterface<V> createCacheValue(V value) {
