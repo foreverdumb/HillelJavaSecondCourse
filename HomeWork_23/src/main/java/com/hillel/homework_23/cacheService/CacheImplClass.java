@@ -1,7 +1,7 @@
-package com.hillel.homework_23.cache_service;
+package com.hillel.homework_23.cacheService;
 
-import com.hillel.homework_23.cache_interface.CacheInterface;
-import com.hillel.homework_23.cache_interface.CacheValueInterface;
+import com.hillel.homework_23.cacheInterface.CacheInterface;
+import com.hillel.homework_23.cacheInterface.CacheValueInterface;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
